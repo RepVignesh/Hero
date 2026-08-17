@@ -16,6 +16,12 @@
   --grid-template-columns-auto: repeat(auto-fit, minmax(200px, 1fr));
 }
 
+.description {
+  font-family:'Times New Roman', Times, serif;
+  font-size:20px;
+  font-style:italic;
+}
+
 * {
   font-family: var(--font-outfit);
 }

@@ -33,7 +33,7 @@ const Header = () => {
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
         transition={{duration: 0.6, delay: 0.7}}
-        className='max-w-2xl mx-auto font-Outfit'>
+        className='max-w-2xl mx-auto font-Outfit description'>
             Hi! I'm Vignesh Kumar, an IT Fresher based in Tamil Nadu. I have a strong passion for technology and a keen interest in web development. I am eager to contribute my skills and knowledge to create innovative solutions and make a positive impact in the tech industry.
         </motion.p>
             <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>

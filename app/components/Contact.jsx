@@ -86,6 +86,7 @@ function Contact({isDarkMode}) {
         mb-12
         font-Ovo
         leading-8
+        description
       ">
         I'd love to hear from you! If you have any questions, comments, or
         feedback, please use the form below.

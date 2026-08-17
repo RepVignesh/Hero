@@ -6,10 +6,11 @@ import edu_icon_dark from './edu-icon-dark.png';
 import project_icon from './project-icon.png';
 import project_icon_dark from './project-icon-dark.png';
 import vscode from './vscode.png';
-import firebase from './firebase.png';
-import figma from './figma.png';
+import github from './github.png';
+import npm from './npm.png';
 import git from './git.png';
 import mongodb from './mongodb.png';
+import nodejs from './nodejs.png';
 import right_arrow_white from './right-arrow-white.png';
 import logo from './logo.png';
 import logo_dark from './logo_dark.png';
@@ -45,8 +46,9 @@ export const assets = {
     project_icon,
     project_icon_dark,
     vscode,
-    firebase,
-    figma,
+    github,
+    npm,
+    nodejs,
     git,
     mongodb,
     right_arrow_white,
@@ -73,21 +75,21 @@ export const assets = {
     right_arrow,
     send_icon,
     right_arrow_bold,
-    right_arrow_bold_dark
+    right_arrow_bold_dark,
 };
 
 export const workData = [
     {
         title: "ReconRaccoon",
         description: "Ethical Hacking Project",
-        bgImage: '/work-1.png',
-        status: "Completed",
+        bgImage: "/work-1.png",
+        status: "Ongoing",
     },
     {
         title: "Geo based app",
         description: "Mobile App",
         bgImage: '/work-2.png',
-        status: "Ongoing",
+        status: "Future",
     },
     {
         title: "Photography site",
@@ -117,5 +119,5 @@ export const infoList = [
 ];
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
+    assets.vscode, assets.github, assets.mongodb, assets.npm, assets.git, assets.nodejs
 ];

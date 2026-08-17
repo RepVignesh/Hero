@@ -44,7 +44,7 @@ const About = ({isDarkMode}) => {
             whileInView={{opacity: 1}}
             transition={{duration: 0.8, delay: 0.6}}
             className="flex-1">
-                <p className="mb-10 max-w-2xl font-Ovo"
+                <p className="mb-10 max-w-2xl font-Ovo description"
                 >I am a passionate developer with experience in creating dynamic web applications. 
                 I specialize in Python, JavaScript, React, and Node.js, and I strive to build efficient 
                 and scalable solutions.

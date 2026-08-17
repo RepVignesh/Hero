@@ -26,7 +26,7 @@ const Services = () => {
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
         transition={{delay: 0.7, duration: 0.5}}
-        className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>
+        className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo description'>
             I offer a range of services to help you bring your ideas to life. From concept to execution, I'm here to make your vision a reality.
         </motion.p>
 
