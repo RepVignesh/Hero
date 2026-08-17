@@ -81,14 +81,25 @@ const About = ({isDarkMode}) => {
                 initial={{opacity: 0}}
                 whileInView={{opacity: 1}}
                 transition={{delay: 1.5, duration: 0.6}}
-                className='flex items-center gap-3 sm:gap-5'>
+                className="flex flex-wrap items-center gap-3 sm:gap-5">
                     {toolsData.map((tool, index) => (
-                        <motion.li 
-                        whileHover={{scale: 1.1}}
-                        className='flex items-center justify-center border-[0.5px] border-gray-400 rounded-lg p-3 cursor-pointer hover:-translate-y-1 duration-500'
-                        key={index}>
-                            <Image src={tool} alt='Tool' className="w-7 sm:w-7"/>
-                        </motion.li>
+                        <motion.li
+                        whileHover={{ scale: 1.1 }}
+                        className="flex items-center justify-center 
+                                border-[0.5px] border-gray-400 
+                                rounded-lg p-3 
+                                cursor-pointer 
+                                hover:-translate-y-1 
+                                duration-500 
+                                shrink-0"
+                        key={index}
+                    >
+                        <Image
+                            src={tool}
+                            alt="Tool"
+                            className="w-6 sm:w-7"
+                        />
+                    </motion.li>
                     ))}                
                 </motion.ul>
             </motion.div>
