@@ -1,3 +1,5 @@
+'use client';
+
 import { assets } from '@/assets/assets';
 import React, { useState } from 'react';
 import Image from 'next/image';
@@ -8,38 +10,50 @@ function Contact({isDarkMode}) {
   const [result, setResult] = useState("");
 
   const onSubmit = async (event) => {
+    console.log(process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY);
     event.preventDefault();
-    setResult("Sending....");
+    setResult("Sending...");
 
     const formData = new FormData(event.target);
 
     formData.append(
-      "access_key",
-      "7ea05681-b6a2-4639-92a2-017312fb05cc"
+        "access_key",
+        process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
     );
 
-    const response = await fetch(
-      "https://api.web3forms.com/submit",
-      {
-        method: "POST",
-        body: formData
-      }
-    );
+    const object = Object.fromEntries(formData);
 
-    const data = await response.json();
+    try {
+        const response = await fetch(
+            "https://api.web3forms.com/submit",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify(object),
+            }
+        );
 
-    if (data.success) {
-      setResult("Form Submitted Successfully");
-      event.target.reset();
-    } else {
-      console.log("Error", data);
-      setResult(data.message);
+        const data = await response.json();
+
+        if (data.success) {
+            setResult("Form Submitted Successfully");
+            event.target.reset();
+        } else {
+            console.log("Error:", data);
+            setResult(data.message);
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        setResult("Something went wrong. Please try again.");
     }
-  };
+};
 
   return (
     <motion.div
-    intial={{ opacity: 0 }}
+    initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
     transition={{ duration: 1 }}
       id="contact"
